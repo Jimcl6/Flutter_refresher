@@ -6,7 +6,12 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: Scaffold(body: const GradientContainer()),
+      home: Scaffold(
+        body: GradientContainer([
+          Color.fromARGB(255, 39, 16, 109),
+          Color.fromARGB(255, 79, 33, 185),
+        ]),
+      ),
     ),
   );
 }
