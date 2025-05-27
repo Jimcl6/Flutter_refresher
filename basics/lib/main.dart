@@ -7,10 +7,10 @@ void main() {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       home: Scaffold(
-        body: GradientContainer([
+        body: GradientContainer(
           Color.fromARGB(255, 39, 16, 109),
           Color.fromARGB(255, 79, 33, 185),
-        ]),
+        ),
       ),
     ),
   );

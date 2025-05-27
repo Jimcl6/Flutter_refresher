@@ -5,9 +5,11 @@ const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer(this.colors, {super.key});
+  // const GradientContainer(this.colors, {super.key});
+  const GradientContainer(this.color1, this.color2, {super.key});
 
-  final List<Color> colors;
+  final Color color1;
+  final Color color2;
 
   @override
   Widget build(context) {
@@ -16,7 +18,7 @@ class GradientContainer extends StatelessWidget {
         gradient: LinearGradient(
           begin: startAlignment,
           end: endAlignment,
-          colors: colors,
+          colors: [color1, color2],
         ),
       ),
       child: const Center(child: StyledText("Hello, Flutter!")),
