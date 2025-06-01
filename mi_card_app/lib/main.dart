@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mi_card_app/custom_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
 
                 // profession
                 Text(
-                  'Software Engineer'.toUpperCase(),
+                  'Mobile App Developer'.toUpperCase(),
                   style: GoogleFonts.sourceSans3(
                     textStyle: TextStyle(
                       fontWeight: FontWeight.w500,
@@ -53,6 +54,17 @@ class MyApp extends StatelessWidget {
                   width: 250.0,
                   child: Divider(thickness: 0.5, color: Colors.white),
                 ),
+
+                CustomCard(
+                  '+63 976 123 7072',
+                  Icon(Icons.phone, color: Colors.teal),
+                ),
+                SizedBox(height: 10.0),
+                CustomCard(
+                  'jedllorente@gmail.com',
+                  Icon(Icons.mail, color: Colors.teal),
+                ),
+
                 // job title
               ],
             ),
