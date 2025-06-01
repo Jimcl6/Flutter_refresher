@@ -1,7 +1,11 @@
-void add(int a, int b) {
-  print(a + b);
+int add(int a, int b) {
+  return a + b;
 }
 
-void sub(int a, int b) {
-  print(a - b);
+int sub(int a, int b) {
+  return a - b;
+}
+
+void mult(int a, int b) {
+  print('Multiplication: ${a * b}');
 }
