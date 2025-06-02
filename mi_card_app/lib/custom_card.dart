@@ -15,11 +15,7 @@ class CustomCard extends StatelessWidget {
         leading: icon,
         title: Text(
           text.toLowerCase(),
-          style: GoogleFonts.montserrat(
-            fontSize: 16,
-            color: Colors.teal.shade800,
-            letterSpacing: 1.5,
-          ),
+          style: GoogleFonts.roboto(fontSize: 16),
         ),
       ),
     );

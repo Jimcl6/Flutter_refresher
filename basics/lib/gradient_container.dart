@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:math';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
@@ -15,6 +16,12 @@ class GradientContainer extends StatelessWidget {
   final Color color1;
   final Color color2;
 
+  int rollDice() {
+    final random = Random();
+    int randomNumber = random.nextInt(6) + 1;
+    return randomNumber;
+  }
+
   @override
   Widget build(context) {
     return Container(
@@ -27,25 +34,14 @@ class GradientContainer extends StatelessWidget {
       ),
       child: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/dice-1.png', width: 200, height: 200),
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                foregroundColor: Colors.white,
-                backgroundColor: Colors.transparent,
-                side: const BorderSide(color: Colors.white, width: 0.5),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
+            Image.asset('assets/images/dice-1.png', width: 200),
+            const SizedBox(height: 20),
+            TextButton(
               onPressed: () {},
               child: Text(
-                'Hello World'.toUpperCase(),
-                style: GoogleFonts.openSans(
-                  color: Colors.white,
-                  letterSpacing: 2.0,
-                ),
+                'Roll Dice',
+                style: GoogleFonts.roboto(color: Colors.white, fontSize: 16),
               ),
             ),
           ],
