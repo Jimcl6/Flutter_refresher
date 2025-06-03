@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:math';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
   // const GradientContainer(this.colors, {super.key});
-  const GradientContainer(this.color1, this.color2, {super.key});
+  GradientContainer(this.color1, this.color2, {super.key});
 
-  const GradientContainer.purple({super.key})
+  GradientContainer.purple({super.key})
     : color1 = const Color.fromARGB(255, 39, 16, 109),
       color2 = const Color.fromARGB(255, 79, 33, 185);
 
   final Color color1;
   final Color color2;
+  var activeDiceImage = 'assets/images/dice-1.png';
 
-  int rollDice() {
-    final random = Random();
-    int randomNumber = random.nextInt(6) + 1;
-    return randomNumber;
+  void rollDice() {
+    activeDiceImage = 'assets/images/dice-4.png';
+    print('Dice Rolled');
   }
 
   @override
@@ -34,15 +33,37 @@ class GradientContainer extends StatelessWidget {
       ),
       child: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/dice-1.png', width: 200),
-            const SizedBox(height: 20),
+            Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(activeDiceImage, width: 200),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Image.asset(activeDiceImage, width: 200),
+                  ),
+                ),
+              ],
+            ),
             TextButton(
-              onPressed: () {},
-              child: Text(
-                'Roll Dice',
-                style: GoogleFonts.roboto(color: Colors.white, fontSize: 16),
+              style: TextButton.styleFrom(
+                padding: const EdgeInsets.all(16),
+                // backgroundColor: const Color.fromARGB(255, 107, 107, 107),
+                foregroundColor: Colors.white,
+                textStyle: GoogleFonts.roboto(
+                  fontSize: 28,
+                  color: Colors.white,
+                  letterSpacing: 2,
+                ),
               ),
+              onPressed: rollDice,
+              child: Text('Roll Dice'.toUpperCase()),
             ),
           ],
         ),

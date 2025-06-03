@@ -11,12 +11,12 @@ class MainScreen extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.red,
         appBar: AppBar(
+          backgroundColor: Colors.red.shade700,
           title: Text(
             'Dicee'.toUpperCase(),
             style: TextStyle(color: Colors.white, letterSpacing: 2.0),
           ),
           centerTitle: true,
-          backgroundColor: Colors.red.shade600,
         ),
         body: Center(child: DicePage()),
       ),
