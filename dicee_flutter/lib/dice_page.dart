@@ -21,19 +21,35 @@ class _DicePageState extends State<DicePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Expanded(
-          child: TextButton(
-            onPressed: rollDice,
-            child: Image.asset('assets/images/dice$leftDiceNumber.png'),
-          ),
+        Row(
+          children: [
+            Expanded(
+              child: TextButton(
+                onPressed: rollDice,
+                child: Image.asset('assets/images/dice$leftDiceNumber.png'),
+              ),
+            ),
+            Expanded(
+              child: TextButton(
+                onPressed: rollDice,
+                child: Image.asset('assets/images/dice$rightDiceNumber.png'),
+              ),
+            ),
+          ],
         ),
-        Expanded(
-          child: TextButton(
-            onPressed: rollDice,
-            child: Image.asset('assets/images/dice$rightDiceNumber.png'),
+        OutlinedButton(
+          style: OutlinedButton.styleFrom(
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              side: BorderSide(color: Colors.white, width: 2),
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
+          onPressed: rollDice,
+          child: Text('Roll Dice'.toUpperCase()),
         ),
       ],
     );
