@@ -42,6 +42,7 @@ class _DicePageState extends State<DicePage> {
         ),
         OutlinedButton(
           style: OutlinedButton.styleFrom(
+            textStyle: const TextStyle(letterSpacing: 2),
             foregroundColor: Colors.white,
             shape: RoundedRectangleBorder(
               side: BorderSide(color: Colors.white, width: 2),
@@ -55,7 +56,3 @@ class _DicePageState extends State<DicePage> {
     );
   }
 }
-
-// class DicePage extends StatelessWidget {
-//   DicePage({super.key});
-// }
