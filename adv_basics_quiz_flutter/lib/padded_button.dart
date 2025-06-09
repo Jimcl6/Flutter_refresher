@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class PaddedButton extends StatelessWidget {
-  const PaddedButton(this.icon, this.text, {super.key});
+  const PaddedButton(this.icon, this.text, {this.onPressed, super.key});
+
+  final void Function()? onPressed;
 
   final Icon icon;
   final Widget text;
@@ -16,7 +18,7 @@ class PaddedButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(5.0),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         icon: icon,
         label: text,
       ),
