@@ -8,6 +8,14 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
+  List<Widget> scoreKeeper = [
+    Icon(Icons.check, color: Colors.lightGreen),
+    Icon(Icons.close_sharp, color: Colors.red),
+    Icon(Icons.close_sharp, color: Colors.red),
+    Icon(Icons.close_sharp, color: Colors.red),
+    Icon(Icons.close_sharp, color: Colors.red),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -68,7 +76,10 @@ class _QuizPageState extends State<QuizPage> {
             ),
           ),
         ),
-        //TODO: Add a Row here as your score keeper
+        Row(children: <Widget>[
+            
+          ],
+        ),
       ],
     );
   }

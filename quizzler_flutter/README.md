@@ -2,15 +2,15 @@
 
 A new Flutter project.
 
-## Getting Started
+## Notes
 
-This project is a starting point for a Flutter application.
+By adding angle brackets after declaring the data type of a variable, we define what types of values that variable can accept:
+e.g.:
 
-A few resources to get you started if this is your first Flutter project:
+```dart
+List<String> myStrings = ['a', 'b', 'c', 'd']; //this variable can only accept strings.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+List<int> myIntegers = [1, 2, 3, 4, 5]; // this variable can only accept integers.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+List<Widget> scoreKeeper = [Icon(Icons.check, color: Colors.lightGreen)]; //this varriable can only accept a list of Widgets.
+```
