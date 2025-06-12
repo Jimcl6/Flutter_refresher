@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'quiz_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const Quizzler());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class Quizzler extends StatelessWidget {
+  const Quizzler({super.key});
 
   @override
   Widget build(BuildContext context) {
