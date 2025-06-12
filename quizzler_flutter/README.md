@@ -14,3 +14,16 @@ List<int> myIntegers = [1, 2, 3, 4, 5]; // this variable can only accept integer
 
 List<Widget> scoreKeeper = [Icon(Icons.check, color: Colors.lightGreen)]; //this varriable can only accept a list of Widgets.
 ```
+
+### Dart[Lists]
+
+```dart
+void main() {
+    List<String> myList = ['Angela', 'James','Katie','Jack'];
+
+    print(myList[3]); // this would return/print "Jack".
+
+    <!-- Dart List Functions -->
+    myList.indexOf('Katie'); //this would return the index "2".
+}
+```
