@@ -25,5 +25,9 @@ void main() {
 
     <!-- Dart List Functions -->
     myList.indexOf('Katie'); //this would return the index "2".
+
+    myList.add('Ben'); // .add() - this function allows us to add a new item to our list while placing it at the end of the list. output: ['Angela', 'James','Katie','Jack', 'Ben']
+
+    mylist.insert(2, 'Ben'); //.insert() - this function allows us to insert a new item on to a specified index of our list.
 }
 ```
