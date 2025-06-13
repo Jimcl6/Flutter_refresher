@@ -57,13 +57,7 @@ class _QuizPageState extends State<QuizPage> {
               onPressed: () {
                 //The user picked true.
                 bool isCorrect = answers[currentQuestionIndex];
-                if (isCorrect == true) {
-                  // scoreKeeper.add(Icon(Icons.check, color: Colors.green));
-                  print('Correct!');
-                } else {
-                  // scoreKeeper.add(Icon(Icons.close, color: Colors.red));
-                  print('Incorrect!');
-                }
+
                 setState(() {
                   currentQuestionIndex++;
                 });
