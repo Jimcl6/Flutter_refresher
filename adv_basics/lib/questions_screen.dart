@@ -10,36 +10,48 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        const Text(
-          'Questions go here...',
-          style: TextStyle(color: Colors.white),
-        ),
-        const SizedBox(height: 30.0),
-        ElevatedButton(
-          onPressed: () {},
-          child: Text('Answers here...'),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.deepPurple.shade900,
+    return SizedBox(
+      width: double.infinity,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text(
+            'Questions go here...',
+            style: TextStyle(color: Colors.white),
           ),
-        ),
-        ElevatedButton(
-          onPressed: () {},
-          child: Text('Answers here...'),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.deepPurple.shade900,
+          const SizedBox(height: 30.0),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.deepPurple.shade900,
+            ),
+            child: Text(
+              'Answers here...',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
-        ),
-        ElevatedButton(
-          onPressed: () {},
-          child: Text('Answers here...'),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.deepPurple.shade900,
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.deepPurple.shade900,
+            ),
+            child: Text(
+              'Answers here...',
+              style: TextStyle(color: Colors.white),
+            ),
           ),
-        ),
-      ],
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.deepPurple.shade900,
+            ),
+            child: Text(
+              'Answers here...',
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
