@@ -1,3 +1,4 @@
+import 'package:adv_basics/models/answer_button.dart';
 import 'package:flutter/material.dart';
 
 class QuestionsScreen extends StatefulWidget {
@@ -13,7 +14,6 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     return SizedBox(
       width: double.infinity,
       child: Column(
-        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -22,40 +22,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             style: TextStyle(color: Colors.white),
           ),
           const SizedBox(height: 30.0),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.deepPurple.shade900,
-            ),
-            child: Text(
-              'Answers here...',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Answers here...',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.deepPurple.shade900,
-              ),
-              child: Text(
-                'Answers here...',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ),
+          AnswerButton(answerText: 'Hello World', onTap: () {}),
+          AnswerButton(answerText: 'Hello World', onTap: () {}),
+          AnswerButton(answerText: 'Hello World', onTap: () {}),
         ],
       ),
     );
