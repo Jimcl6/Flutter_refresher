@@ -13,7 +13,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     return SizedBox(
       width: double.infinity,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           const Text(
             'Questions go here...',
@@ -32,22 +34,26 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           ),
           ElevatedButton(
             onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.deepPurple.shade900,
-            ),
-            child: Text(
-              'Answers here...',
-              style: TextStyle(color: Colors.white),
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.deepPurple),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Answers here...',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
-          ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.deepPurple.shade900,
-            ),
-            child: Text(
-              'Answers here...',
-              style: TextStyle(color: Colors.white),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.deepPurple.shade900,
+              ),
+              child: Text(
+                'Answers here...',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ),
         ],
