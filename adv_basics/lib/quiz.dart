@@ -1,6 +1,6 @@
-import 'package:adv_basics/questions_screen.dart';
+import 'package:adv_basics/screens/questions_screen.dart';
 import 'package:flutter/material.dart';
-import 'start_screen.dart';
+import 'package:adv_basics/screens/start_screen.dart';
 
 class QuizPage extends StatefulWidget {
   const QuizPage({super.key});
