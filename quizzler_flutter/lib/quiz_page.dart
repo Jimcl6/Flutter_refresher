@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizzler_flutter/ans_btn.dart';
 
 class QuizPage extends StatefulWidget {
   const QuizPage({super.key});
@@ -42,25 +43,23 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           child: Padding(
             padding: EdgeInsets.all(15.0),
-            child: TextButton(
-              style: TextButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                backgroundColor: Colors.green,
-                foregroundColor: Colors.white,
-              ),
-              child: Text(
-                'True',
-                style: TextStyle(color: Colors.white, fontSize: 20.0),
-              ),
+            child: AnsBtn(
+              'True',
+              Colors.green,
               onPressed: () {
-                //The user picked true.
                 bool isCorrect = answers[currentQuestionIndex];
+
+                if (isCorrect == true) {
+                  print("[DEBUG]: User got it right.");
+                } else {
+                  print("[DEBUG]: User got it wrong.");
+                }
 
                 setState(() {
                   currentQuestionIndex++;
                 });
+
+                print(currentQuestionIndex);
               },
             ),
           ),
@@ -68,23 +67,23 @@ class _QuizPageState extends State<QuizPage> {
         Expanded(
           child: Padding(
             padding: EdgeInsets.all(15.0),
-            child: TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: Colors.red,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-              ),
-              child: Text(
-                'False',
-                style: TextStyle(fontSize: 20.0, color: Colors.white),
-              ),
+            child: AnsBtn(
+              'False',
+              Colors.red,
               onPressed: () {
-                //The user picked false.
+                bool isCorrect = answers[currentQuestionIndex];
+
+                if (isCorrect == false) {
+                  print("[DEBUG]: User got it right.");
+                } else {
+                  print("[DEBUG]: User got it wrong.");
+                }
+
                 setState(() {
                   currentQuestionIndex++;
-                  print(currentQuestionIndex);
                 });
+
+                print(currentQuestionIndex);
               },
             ),
           ),
